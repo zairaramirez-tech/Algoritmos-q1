@@ -42,3 +42,28 @@ Algoritmo ControlStockProductos
     ESCRIBIR "==========================================="
 
 FINALGORITMO
+
+
+
+
+
+Tabla de trazado
+### Prueba de Escritorio (Tabla de Trazado)
+
+**Datos utilizados para la prueba:**
+* Producto 1: Stock = 15
+* Producto 2: Stock = 0 (*Agotado*)
+* Producto 3: Stock = 8
+* Producto 4: Stock = 0 (*Agotado*)
+* Producto 5: Stock = 22
+
+| Paso / Iteración | N | i | stock | inventario[i] | stockTotal | Condición (stock == 0) | Salida en Pantalla / Reporte |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Inicio / Config** | 5 | - | - | - | 0 | - | "Ingrese la cantidad total de productos (N): " -> 5 |
+| **Iteración i = 1** | 5 | 1 | 15 | inventario[1] = 15 | 15 | FALSO | "Ingrese el stock... posición 1: " -> 15 |
+| **Iteración i = 2** | 5 | 2 | 0 | inventario[2] = 0 | 15 | **VERDADERO** | "Ingrese el stock... posición 2: " -> 0 <br> **"-> Producto agotado detectado en la posicion del arreglo: 2"** |
+| **Iteración i = 3** | 5 | 3 | 8 | inventario[3] = 8 | 23 | FALSO | "Ingrese el stock... posición 3: " -> 8 |
+| **Iteración i = 4** | 5 | 4 | 0 | inventario[4] = 0 | 23 | **VERDADERO** | "Ingrese el stock... posición 4: " -> 0 <br> **"-> Producto agotado detectado en la posicion del arreglo: 4"** |
+| **Iteración i = 5** | 5 | 5 | 22 | inventario[5] = 22 | 45 | FALSO | "Ingrese el stock... posición 5: " -> 22 |
+| **Fin del Ciclo** | 5 | 6 | - | - | 45 | - | *i supera a N (6 > 5). Sale del bucle.* |
+| **Resultado Final** | 5 | - | - | - | 45 | - | **"El stock total disponible en la tienda es: 45"** |
